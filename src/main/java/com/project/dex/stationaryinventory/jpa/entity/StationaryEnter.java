@@ -1,8 +1,8 @@
-package com.project.dex.stationaryinventory.entity;
+package com.project.dex.stationaryinventory.jpa.entity;
 
 import java.util.Date;
 
-import com.project.dex.stationaryinventory.entity.enums.StationaryType;
+import com.project.dex.stationaryinventory.jpa.entity.enums.StationaryType;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -23,31 +23,26 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @EqualsAndHashCode
-public class StationaryOut {
-    
+public class StationaryEnter {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long stationaryOutId;
-
     public Long stationaryId;
-
-    @JoinColumn(name = "noInduk")
-    public Borrowers borrowerId;
     
     @Enumerated(EnumType.STRING)
     public StationaryType stationaryType;
 
     public String nameStationary;
 
-    public String takenBy;
+    @JoinColumn(name="user_id")
+    public UserBase receivedBy;
 
-    public Date takenAt;
-
-    public Date returneturnAt;
-    public Date promiseReturnAt;
+    public Date receivedAt;
 
     public Long quantity;
-    
-    public String remarkBorrower;
+
+    public boolean isEntered;
+
+    public String remarkReceiver;
 
 }

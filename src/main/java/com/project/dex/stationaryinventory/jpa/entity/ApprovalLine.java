@@ -1,4 +1,4 @@
-package com.project.dex.stationaryinventory.entity;
+package com.project.dex.stationaryinventory.jpa.entity;
 
 import java.util.Date;
 

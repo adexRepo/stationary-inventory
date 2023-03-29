@@ -1,6 +1,6 @@
-package com.project.dex.stationaryinventory.entity;
+package com.project.dex.stationaryinventory.jpa.entity;
 
-import com.project.dex.stationaryinventory.entity.enums.StationaryType;
+import com.project.dex.stationaryinventory.jpa.entity.enums.BorrowerType;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -18,20 +18,21 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @EqualsAndHashCode
-public class Stationary {
-    
+public class Borrowers {
+
     @Id
-    public Long stationaryId;
-    
+    public Long noInduk;
+
     @Enumerated(EnumType.STRING)
-    public StationaryType stationaryType;
+    public BorrowerType borrowerType;
     
-    public String nameStationary;
+    public String name;
 
-    public String quantity;
+    public String email;
+    
+    public String telNo;
 
-    public boolean isStationaryOk;
-
-    public String remarkStaff;
-
+    public Long totalBorrow;
+    
+    public Long totalReturn;
 }

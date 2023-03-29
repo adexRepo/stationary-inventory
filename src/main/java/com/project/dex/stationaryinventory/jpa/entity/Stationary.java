@@ -1,6 +1,6 @@
-package com.project.dex.stationaryinventory.entity;
+package com.project.dex.stationaryinventory.jpa.entity;
 
-import com.project.dex.stationaryinventory.entity.enums.RoleType;
+import com.project.dex.stationaryinventory.jpa.entity.enums.StationaryType;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -18,20 +18,20 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @EqualsAndHashCode
-public class UserBase {
+public class Stationary {
     
     @Id
-    public String userId;
-
-    public Long noInduk;
-
-    public String name;
-
-    @Enumerated(EnumType.STRING)
-    public RoleType role;
-
-    public boolean isActive;
-
+    public Long stationaryId;
     
+    @Enumerated(EnumType.STRING)
+    public StationaryType stationaryType;
+    
+    public String nameStationary;
+
+    public String quantity;
+
+    public boolean isStationaryOk;
+
+    public String remarkStaff;
 
 }

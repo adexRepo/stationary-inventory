@@ -1,6 +1,6 @@
-package com.project.dex.stationaryinventory.entity;
+package com.project.dex.stationaryinventory.jpa.entity;
 
-import com.project.dex.stationaryinventory.entity.enums.BorrowerType;
+import com.project.dex.stationaryinventory.jpa.entity.enums.RoleType;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -18,17 +18,26 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @EqualsAndHashCode
-public class Borrowers {
-
+public class UserBase {
+    
     @Id
     public Long noInduk;
 
-    @Enumerated(EnumType.STRING)
-    public BorrowerType borrowerType;
-    
+    public String username;
+
+    public String password;
+
+    public String email;
+
+    public String telNo;
+
     public String name;
 
-    public Long totalBorrow;
+    @Enumerated(EnumType.STRING)
+    public RoleType role;
+
+    public boolean isActive;
+
     
-    public Long totalReturn;
+
 }

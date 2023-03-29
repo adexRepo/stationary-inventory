@@ -1,4 +1,4 @@
-package com.project.dex.stationaryinventory.entity.enums;
+package com.project.dex.stationaryinventory.jpa.entity.enums;
 
 public enum StationaryType {
     MENULIS,
