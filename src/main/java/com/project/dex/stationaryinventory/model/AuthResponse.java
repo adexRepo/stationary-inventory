@@ -12,5 +12,6 @@ import lombok.NoArgsConstructor;
 public class AuthResponse {
     
     private boolean okAuthenticated;
+    private String msg;
     
 }

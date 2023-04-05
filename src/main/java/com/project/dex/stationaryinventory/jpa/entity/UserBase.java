@@ -2,6 +2,7 @@ package com.project.dex.stationaryinventory.jpa.entity;
 
 import com.project.dex.stationaryinventory.jpa.entity.enums.RoleType;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -23,10 +24,12 @@ public class UserBase {
     @Id
     public Long noInduk;
 
+    @Column(name="username",unique = true)
     public String username;
 
     public String password;
 
+    @Column(name="email",unique = true)
     public String email;
 
     public String telNo;
@@ -37,5 +40,7 @@ public class UserBase {
     public RoleType role;
 
     public boolean isActive;
+
+    public boolean isLogin;
     
 }
