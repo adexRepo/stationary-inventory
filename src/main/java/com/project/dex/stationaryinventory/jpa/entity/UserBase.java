@@ -37,7 +37,5 @@ public class UserBase {
     public RoleType role;
 
     public boolean isActive;
-
     
-
 }
