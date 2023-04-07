@@ -1,0 +1,20 @@
+.parent{
+    -fx-background-color:transparent;
+}
+
+.pane{
+    -fx-background-color:#2196f3;
+}
+
+.trans-btn-white-border{
+    -fx-background-color :transparent;
+    -fx-background-radius : 5px;
+    -fx-border-color : #cccccc;
+    -fx-border-radius : 5px;
+    -fx-border-width : 1px;
+    -fx-text-fill : whitesmoke;
+}
+
+.pane-white{
+    -fx-background-color:#ffffff;
+}

@@ -1,6 +1,6 @@
 package com.project.dex.stationaryinventory.controller;
 
-public interface CrudInterface{
+public interface CrudController{
 
     public void create();
 
