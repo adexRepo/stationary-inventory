@@ -1,27 +1,28 @@
 spring:
-    profiles:
-        active: dev
-    flyway:
-        enabled: true
-        baselineOnMigrate: true
-        validateOnMigrate: false
     datasource:
-        url: jdbc:mysql://localhost:3306/stationary_inventory
-        username: kkpuser
-        password: kkppassword1
+        url: jdbc:mysql://localhost:3306/stationary?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&autoReconnect=true&useSSL=false&noAccessToProcedureBodies=true
+        username: root
+        password: 
         driver-class-name: com.mysql.cj.jdbc.Driver
+        hikari:
+            connectionTimeout: 30000
+            idleTimeout: 600000 
+            maxLifetime: 1800000
+            maximumPoolSize: 200
     jpa:
         hibernate:  
-            ddl-auto: create-drop          
+            ddl-auto: update 
         show-sql: true
         properties:
             hibernate:
                 format-sql: true
+                jdbc:
+                    timeZone: UTC+1
+                dialect: org.hibernate.dialect.MySQLDialect
+                id:
+                    newGeneratorMappings: false
+                showSql: true
+                formatSql: false
+                nonContextualCreation: true
         database: mysql
-        database-platform: org.hibernate.dialect.MySQLDialect
-
-logging:
-  level:
-    '[com.project.dex]': DEBUG
-  pattern:
-    console: "%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"
+        database-platform: org.hibernate.dialect.MySQL8Dialect
