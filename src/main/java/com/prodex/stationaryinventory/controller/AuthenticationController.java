@@ -26,7 +26,7 @@ public class AuthenticationController implements Initializable {
     @FXML
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        TranslateTransition trans = new TranslateTransition(Duration.seconds(2), vbox);
+        TranslateTransition trans = new TranslateTransition(Duration.seconds(1), vbox);
         trans.setToX(vbox.getLayoutX()*20);
         trans.play();
         trans.setOnFinished((e) ->{
@@ -43,7 +43,7 @@ public class AuthenticationController implements Initializable {
 
     @FXML
     private void openSignIn(ActionEvent actEvent){
-        TranslateTransition trans = new TranslateTransition(Duration.seconds(2), vbox);
+        TranslateTransition trans = new TranslateTransition(Duration.seconds(1), vbox);
         trans.setToX(vbox.getLayoutX()*20);
         trans.play();
         trans.setOnFinished((e) ->{
@@ -60,7 +60,7 @@ public class AuthenticationController implements Initializable {
     
     @FXML
     private void openSignUp(ActionEvent actEvent){
-        TranslateTransition trans = new TranslateTransition(Duration.seconds(2), vbox);
+        TranslateTransition trans = new TranslateTransition(Duration.seconds(1), vbox);
         trans.setToX(0);
         trans.play();
         trans.setOnFinished((e) ->{
