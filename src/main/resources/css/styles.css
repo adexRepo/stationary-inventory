@@ -18,9 +18,11 @@
 }
 .white-pane{
     -fx-background-color: #ffffff;
+    -fx-border-radius: 5px;
 }
 .blue-panel{
     -fx-background-color: #151928;
+    -fx-border-radius: 5px;
 }
 .tf_box{
     -fx-background-color: transparent;
@@ -33,7 +35,7 @@
 .blue-btn{
     -fx-background-color: #2196f3;
     -fx-background-radius: 5px;
-    -fx-text-fill: #fffff;
+    -fx-text-fill: #ffffff;
 }
 
 ;

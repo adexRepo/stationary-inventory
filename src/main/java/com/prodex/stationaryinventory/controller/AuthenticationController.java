@@ -26,25 +26,13 @@ public class AuthenticationController implements Initializable {
     @FXML
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        TranslateTransition trans = new TranslateTransition(Duration.seconds(1), vbox);
-        trans.setToX(vbox.getLayoutX()*20);
-        trans.play();
-        trans.setOnFinished((e) ->{
-            try {
-                fxml = FXMLLoader.load(getClass().getResource(PathConstants.SIGN_IN));
-                vbox.getChildren().removeAll();
-                vbox.getChildren().setAll(fxml);
-
-            } catch (IOException e1) {
-                e1.printStackTrace();
-            }
-        });
+        openSignIn();
     }
 
     @FXML
-    private void openSignIn(ActionEvent actEvent){
+    private void openSignIn(){
         TranslateTransition trans = new TranslateTransition(Duration.seconds(1), vbox);
-        trans.setToX(vbox.getLayoutX()*20);
+        trans.setToX(vbox.getLayoutX()*10);
         trans.play();
         trans.setOnFinished((e) ->{
             try {
@@ -59,7 +47,7 @@ public class AuthenticationController implements Initializable {
     }
     
     @FXML
-    private void openSignUp(ActionEvent actEvent){
+    private void openSignUp(){
         TranslateTransition trans = new TranslateTransition(Duration.seconds(1), vbox);
         trans.setToX(0);
         trans.play();
