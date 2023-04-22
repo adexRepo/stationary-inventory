@@ -7,7 +7,6 @@ import java.util.ResourceBundle;
 import com.prodex.stationaryinventory.common.PathConstants;
 
 import javafx.animation.TranslateTransition;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;

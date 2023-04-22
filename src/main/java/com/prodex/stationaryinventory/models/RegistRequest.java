@@ -14,23 +14,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class RegistRequest {
-    
-    private Long noInduk;
 
+    private Long idEmployee;
+    private String idDepartement;
     private String username;
-
     private String password;
-
-    private String email;
-
     private String telNo;
-
     private String firstName;
     private String lastName;
     private String fullName;
-
-    @Enumerated(EnumType.STRING)
-    private RoleType role;
-
-    private boolean isActive;
 }
