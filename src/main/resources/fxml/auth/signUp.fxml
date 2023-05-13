@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="480.0" styleClass="blue-panel" stylesheets="@..\..\css\styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignInController">
+<VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="480.0" styleClass="blue-panel" stylesheets="@..\..\css\styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.prodex.stationaryinventory.controller.SignUpController">
    <children>
       <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="237.0">
          <children>
@@ -18,7 +18,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label id="labelInfo" text=" " textFill="#81ff4c" />
+            <Label fx:id="labelInfo" text=" " textFill="#B91010" />
          </children>
          <VBox.margin>
             <Insets left="15.0" right="15.0" top="20.0" />
@@ -26,13 +26,13 @@
       </HBox>
       <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0">
          <children>
-            <TextField id="idEmployee" prefHeight="26.0" prefWidth="206.0" promptText="id Karyawan" styleClass="tf_box" />
+            <TextField fx:id="idEmployee" prefHeight="26.0" prefWidth="206.0" promptText="id Karyawan" styleClass="tf_box" />
             <Label text=" " textFill="#0088FF">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <ComboBox id="idDepartement" prefHeight="25.0" prefWidth="237.0" promptText="Select Departement" styleClass="tf_box" />
+            <ComboBox fx:id="idDepartement" prefHeight="25.0" prefWidth="237.0" promptText="Select Departement" styleClass="tf_box" />
          </children>
          <VBox.margin>
             <Insets left="15.0" right="15.0" top="20.0" />
@@ -40,13 +40,13 @@
       </HBox>
       <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0">
          <children>
-            <TextField id="firstName" prefHeight="26.0" prefWidth="195.0" promptText="First Name" styleClass="tf_box" HBox.hgrow="ALWAYS" />
+            <TextField fx:id="firstName" prefHeight="26.0" prefWidth="195.0" promptText="First Name" styleClass="tf_box" HBox.hgrow="ALWAYS" />
             <Label text=" " textFill="#0088FF">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField id="lastName" prefHeight="26.0" prefWidth="237.0" promptText="Last Name" styleClass="tf_box" />
+            <TextField fx:id="lastName" prefHeight="26.0" prefWidth="237.0" promptText="Last Name" styleClass="tf_box" />
          </children>
          <VBox.margin>
             <Insets left="15.0" right="15.0" top="20.0" />
@@ -54,13 +54,13 @@
       </HBox>
       <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0">
          <children>
-            <TextField id="fullName" prefHeight="26.0" prefWidth="216.0" promptText="Full Name" styleClass="tf_box" />
+            <TextField fx:id="fullName" prefHeight="26.0" prefWidth="216.0" promptText="Full Name" styleClass="tf_box" />
             <Label text=" " textFill="#0088FF">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField id="noWhatsApp" prefHeight="26.0" prefWidth="243.0" promptText="No WhatsApp" styleClass="tf_box" HBox.hgrow="ALWAYS" />
+            <TextField fx:id="noWhatsApp" prefHeight="26.0" prefWidth="243.0" promptText="No WhatsApp" styleClass="tf_box" HBox.hgrow="ALWAYS" />
          </children>
          <VBox.margin>
             <Insets left="15.0" right="15.0" top="15.0" />
@@ -68,19 +68,19 @@
       </HBox>
       <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0">
          <children>
-            <TextField id="password" prefHeight="26.0" prefWidth="197.0" promptText="Password" styleClass="tf_box" HBox.hgrow="ALWAYS" />
+            <TextField fx:id="password" prefHeight="26.0" prefWidth="197.0" promptText="Password" styleClass="tf_box" HBox.hgrow="ALWAYS" />
             <Label text=" " textFill="#0088FF">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField id="rePassword" prefHeight="26.0" prefWidth="235.0" promptText="Re-Password" styleClass="tf_box" />
+            <TextField fx:id="rePassword" prefHeight="26.0" prefWidth="235.0" promptText="Re-Password" styleClass="tf_box" />
          </children>
          <VBox.margin>
             <Insets left="15.0" right="15.0" top="20.0" />
          </VBox.margin>
       </HBox>
-      <Button mnemonicParsing="false" onAction="#btnSignUpOnClick" prefHeight="38.0" prefWidth="456.0" styleClass="blue-btn" text="Sign Up" textFill="WHITE">
+      <Button fx:id="signUpButton" mnemonicParsing="false" onAction="#signUpOnClick" prefHeight="38.0" prefWidth="456.0" styleClass="blue-btn" text="Sign Up" textFill="WHITE">
          <font>
             <Font size="17.0" />
          </font>

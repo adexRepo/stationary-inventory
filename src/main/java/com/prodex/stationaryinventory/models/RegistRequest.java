@@ -1,9 +1,4 @@
 package com.prodex.stationaryinventory.models;
-
-import com.prodex.stationaryinventory.common.enums.RoleType;
-
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
