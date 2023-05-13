@@ -5,6 +5,7 @@ import java.util.Optional;
 import org.springframework.stereotype.Service;
 
 import com.prodex.stationaryinventory.common.HashingPassword;
+import com.prodex.stationaryinventory.common.enums.RoleType;
 import com.prodex.stationaryinventory.entities.UserBase;
 import com.prodex.stationaryinventory.entities.UserBase.UserBaseBuilder;
 import com.prodex.stationaryinventory.models.AuthResponse;
@@ -58,7 +59,7 @@ public class LoginRegistServiceImpl implements LoginRegistService {
     @Override
     public AuthResponse regist(RegistRequest registRequest) {
 
-        Optional<UserBase> userNow = daoUserRepository.findById(registRequest.getNoInduk());
+        Optional<UserBase> userNow = daoUserRepository.findById(registRequest.getIdEmployee());
         AuthResponse response = new AuthResponse();
 
         userNow.ifPresentOrElse(
@@ -77,16 +78,15 @@ public class LoginRegistServiceImpl implements LoginRegistService {
     private void registration(RegistRequest registRequest) {
         HashingPassword hashingPassword = new HashingPassword();
         UserBaseBuilder newUser = UserBase.builder()
-                .noInduk(registRequest.getNoInduk())
+                .idEmployee(registRequest.getIdEmployee())
                 .username(registRequest.getUsername())
-                .email(registRequest.getEmail())
                 .firstName(registRequest.getFirstName())
                 .lastName(registRequest.getLastName())
                 .fullName(registRequest.getFullName())
                 .telNo(registRequest.getTelNo())
                 .isLocked(false)
                 .isLogin(false)
-                .role(registRequest.getRole())
+                .role(RoleType.STAFF)
                 .password(hashingPassword.tryHashPassword(registRequest.getPassword()));
         daoUserRepository.saveAndFlush(newUser.build());
     }

@@ -35,17 +35,17 @@ public class UserBase extends BaseEntity implements UserDetails {
     @Id
     @GeneratedValue
     private Long id;
-    @Column(name="no_induk",unique=true )
-    private Long     noInduk  ;
-    @Column(name="username",unique=true )
+    @Column(name = "id_employee", unique = true)
+    private Long idEmployee;
+    @Column(name = "username", unique = true, nullable = false)
     private String username;
-    @Column(name="email",unique=true )
+    @Column(name = "email", unique = true, nullable = true)
     private String email;
     private String firstName;
-    private String lastName ;
-    private String fullName ;
-    private String telNo    ;
-    private String password ;
+    private String lastName;
+    private String fullName;
+    private String telNo;
+    private String password;
     private boolean isLocked;
     private boolean isLogin;
     @Enumerated(EnumType.STRING)
